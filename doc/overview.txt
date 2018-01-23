@@ -1,0 +1,53 @@
+
+This is the order of events for the 1000Monkey programmer:
+
+
+Test Cases
+-------------
+
+The test case is the base for telling the system what we want. From the test case teh system will create a class and the corresponding methods.
+The test cases should be
+
+ - For this there is a need to extend the language of testcases in JJunit - e.g. variable instantiation, irrelevance and automatic instantiation of test values
+
+
+Strategies
+-----------
+
+The system will then apply strategies to solving the problem, coming up with a solution. A strategy corresponds to a design pattern.
+The idea is that the system shall be able to expand the library of strategies by abstracting them from code examples.
+
+ - AI: Using Java-NLP (PLP?) and unsupervised learning algorithms to analyse code and to extract a strategy
+
+Random Walk
+------------
+
+The system shall be able to randomly generate a syntactically correct java code example.
+The random walk should be enforced with Genetic Algorithms to speed up search.
+
+  - AI: GA to search for solutions
+
+Spline Coing
+-------------
+
+Spline Coding is about using one or more anchor points and generate "random" code in-between with a LSTM-agorithm for JAVA code.
+An anchor point could be something like "iterate this parameter"
+ - AI: LSTM for "good" code
+Goal is to reduce the search space for solutions to solving the test case
+
+The spline coding could also be used to introduce ono-injected dependencies necessary to solve the task. (E.g. adding database access etc.)
+For simple examples this should not be necessary, but it would help fronteir use of the service
+
+Test Execution
+---------------
+
+The system should be able to quickly execute test cases against the generated suggested solution.
+Key here is to have the possibility to terminate execution that is not terminating
+
+
+Code Quality Evaluation
+------------------------
+
+By using a neural network the system should be able to classify the quality of multiple outcomes.
+
+
